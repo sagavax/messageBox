@@ -1,8 +1,9 @@
 let overlay = null;
 let messageBox = null;
 let hideTimeout = null;
+let circle = null;
 
-function ShowMessage(text) {
+function ShowMessage(text, status) {
   if (!overlay) {
     overlay = document.createElement("div");
     overlay.classList.add("overlay");
@@ -10,10 +11,10 @@ function ShowMessage(text) {
     const infoBox = document.createElement("div");
     infoBox.classList.add("logon_information");
 
-    const circle = document.createElement("div");
-    circle.classList.add("circle", "success");
+    circle = document.createElement("div");
+    circle.classList.add("circle");
+
     const icon = document.createElement("i");
-    icon.classList.add("fa", "fa-check-circle");
     circle.appendChild(icon);
 
     messageBox = document.createElement("div");
@@ -25,12 +26,34 @@ function ShowMessage(text) {
     document.body.appendChild(overlay);
   }
 
-  if (hideTimeout) clearTimeout(hideTimeout);
+  // Reset tried a nastav novú podľa statusu
+  circle.className = "circle";
+  circle.classList.add(status);
+
+  const icon = circle.querySelector("i");
+  icon.className = "fa"; // reset ikony
+  switch (status) {
+    case "error":
+      icon.classList.add("fa-times-circle");
+      break;
+    case "warning":
+      icon.classList.add("fa-exclamation-circle");
+      break;
+    case "info":
+      icon.classList.add("fa-info-circle");
+      break;
+    case "success":
+    default:
+      icon.classList.add("fa-check-circle");
+      break;
+  }
 
   messageBox.innerHTML = text;
 
+  if (hideTimeout) clearTimeout(hideTimeout);
+
   overlay.classList.remove("hidden", "fade-out");
-  void overlay.offsetWidth;
+  void overlay.offsetWidth; // force reflow
   overlay.classList.add("fade-out");
 
   hideTimeout = setTimeout(() => {
