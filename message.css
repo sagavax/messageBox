@@ -54,6 +54,14 @@ body {
     color: #F07142;
 }
 
+.info i {
+    color: #4A90E2;
+}
+
+.warning i {
+    color: #F5A623;
+}   
+
 
   .circle {
     position: absolute;
@@ -61,6 +69,9 @@ body {
     top:0px;
    }
   
+
+
+
    .circle i {
     background-color: white;
     border-radius: 50%;
