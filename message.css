@@ -1,30 +1,63 @@
 .overlay {
+    width:100vw;
+    height:100vh;
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #f0fdf4;
-    border-left: 6px solid #22c55e;
-    color: #065f46;
-    padding: 16px 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    z-index: 1000;
-    opacity: 1;
-    animation: fadeOut 3s forwards;
-  }
-  
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.8);
+    z-index: 100;
+      }
+
   .logon_information {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);  
+  height: 200px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+  }
+
+  .logon_information_text {
+    font-family: 'Noto Sans', sans-serif;
     display: flex;
     align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    color:#444;
+    font-size: 36px;
+    font-weight: bold;
   }
   
-  .circle.success {
-    font-size: 24px;
-    color: #22c55e;
-  }
+  .success i {
+    color: #5FB67D;
+}
+
+.error i {
+    color: #F07142;
+}
+
+
+  .circle {
+    position: absolute;
+    transform: translateY(-50%);
+    top:-15px;
+   }
+  
+   .circle i {
+    background-color: white;
+    border-radius: 50%;
+   }
+
   
   .logon_information_text {
     font-size: 16px;
