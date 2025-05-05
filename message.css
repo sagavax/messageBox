@@ -12,11 +12,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 50px;
   color: white;
   transform: translate(-50%,-50%);  
   height: 200px;
-  width: 300px;
+  width: 400px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +33,6 @@
     padding: 10px;
     border-radius: 5px;
     color:#444;
-    font-size: 36px;
     font-weight: bold;
   }
   
@@ -60,7 +58,7 @@
 
   
   .logon_information_text {
-    font-size: 16px;
+    font-size: 30px;
   }
   
   .hidden {

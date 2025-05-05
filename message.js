@@ -32,8 +32,8 @@ function ShowMessage(text) {
   overlay.classList.remove("hidden", "fade-out");
   void overlay.offsetWidth;
   overlay.classList.add("fade-out");
-
+/* 
   hideTimeout = setTimeout(() => {
     overlay.classList.add("hidden");
-  }, 3000);
+  }, 3000); */
 }
