@@ -17,10 +17,10 @@
 
 2. Create messages in JavasScript
 ````javascript
-  ShowMessage('Operácia bola úspešná!', 'success');
-  ShowMessage('Nastala chyba.', 'error');
-  ShowMessage('Upozornenie: Nezabudol si vyplniť pole.', 'warning');
-  ShowMessage('Info: Nezabudol si potvrdiť email.', 'info');
+  ShowMessage('Operation successful!', 'success');
+  ShowMessage('Your message', 'error');
+  ShowMessage('your message here.', 'warning');
+  ShowMessage('Sample text here.', 'info');
 ````
 
 ## License
