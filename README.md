@@ -9,5 +9,7 @@
 *Animations for displaying and hiding messages.
 
 ## Installation
-
 Copy JavaScript a CSS to your project.
+
+## License
+This project is licensed under the MIT License
